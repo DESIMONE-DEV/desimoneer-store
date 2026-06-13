@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Argentina — DESIMONEER STORE</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background: linear-gradient(to bottom, #74acdf 33%, #fff 33% 66%, #74acdf 66%); }
+  header { background: linear-gradient(135deg, #0b3d91, #1a5fc8); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">⚽ DESIMONEER STORE</a>
+  <button id="cart-btn" onclick="toggleCart()">
+    🛒 Carrito <span id="cart-count">0</span>
+  </button>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="argentina.html" class="active">🇦🇷 Argentina</a>
+  <a href="brasil.html">🇧🇷 Brasil</a>
+  <a href="francia.html">🇫🇷 Francia</a>
+  <a href="alemania.html">🇩🇪 Alemania</a>
+  <a href="espana.html">🇪🇸 España</a>
+  <a href="portugal.html">🇵🇹 Portugal</a>
+  <a href="inglaterra.html">🏴 Inglaterra</a>
+  <a href="holanda.html">🇳🇱 Países Bajos</a>
+</nav>
+
+<div id="cart-panel">
+  <h2>🛒 Mi Carrito <button onclick="toggleCart()">✕</button></h2>
+  <ul id="cart-items"></ul>
+  <div class="cart-footer">
+    <div class="cart-total-row"><span>Total</span><span>$<span id="cart-total">0</span></span></div>
+    <button class="btn-wa" onclick="buildWhatsAppMsg()">💬 Pedir por WhatsApp</button>
+    <button class="btn-clear" onclick="clearCart()">🗑 Vaciar carrito</button>
+  </div>
+</div>
+
+<section class="hero">
+  <h1>🇦🇷 Selección Argentina</h1>
+  <p>Figuritas Panini · Mundial 2026</p>
+</section>
+
+<div class="container">
+  <h2>Jugadores disponibles</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-1.webp" alt="Escudo Argentina">
+      <div class="card-body">
+        <h3>ARG-1 Escudo Argentina</h3>
+        <p class="price">$800</p>
+        <button class="add-btn" onclick="addCart('ARG-1 Escudo Argentina',800,'https://figusdelmundial.com/figus/img/ARG-1.webp')">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-2.webp" alt="Emiliano Martínez">
+      <div class="card-body">
+        <h3>ARG-2 Emiliano Martínez</h3>
+        <p class="price">$1.500</p>
+        <button class="add-btn" onclick="addCart('ARG-2 Emiliano Martínez',1500,'https://figusdelmundial.com/figus/img/ARG-2.webp')">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-3.webp" alt="Cristian Romero">
+      <div class="card-body">
+        <h3>ARG-3 Cristian Romero</h3>
+        <p class="price">$1.200</p>
+        <button class="add-btn" onclick="addCart('ARG-3 Cristian Romero',1200,'https://figusdelmundial.com/figus/img/ARG-3.webp')">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-4.webp" alt="Nicolás Otamendi">
+      <div class="card-body">
+        <h3>ARG-4 Nicolás Otamendi</h3>
+        <p class="price">$1.200</p>
+        <button class="add-btn" onclick="addCart('ARG-4 Nicolás Otamendi',1200,'https://figusdelmundial.com/figus/img/ARG-4.webp')">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-5.webp" alt="Marcos Acuña">
+      <div class="card-body">
+        <h3>ARG-5 Marcos Acuña</h3>
+        <p class="price">$1.000</p>
+        <button class="add-btn" onclick="addCart('ARG-5 Marcos Acuña',1000,'https://figusdelmundial.com/figus/img/ARG-5.webp')">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-6.webp" alt="Rodrigo De Paul">
+      <div class="card-body">
+        <h3>ARG-6 Rodrigo De Paul</h3>
+        <p class="price">$1.300</p>
+        <button class="add-btn" onclick="addCart('ARG-6 Rodrigo De Paul',1300,'https://figusdelmundial.com/figus/img/ARG-6.webp')">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-7.webp" alt="Leandro Paredes">
+      <div class="card-body">
+        <h3>ARG-7 Leandro Paredes</h3>
+        <p class="price">$1.200</p>
+        <button class="add-btn" onclick="addCart('ARG-7 Leandro Paredes',1200,'https://figusdelmundial.com/figus/img/ARG-7.webp')">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-8.webp" alt="Giovani Lo Celso">
+      <div class="card-body">
+        <h3>ARG-8 Giovani Lo Celso</h3>
+        <p class="price">$1.200</p>
+        <button class="add-btn" onclick="addCart('ARG-8 Giovani Lo Celso',1200,'https://figusdelmundial.com/figus/img/ARG-8.webp')">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-9.webp" alt="Julián Álvarez">
+      <div class="card-body">
+        <h3>ARG-9 Julián Álvarez</h3>
+        <p class="price">$2.000</p>
+        <button class="add-btn" onclick="addCart('ARG-9 Julián Álvarez',2000,'https://figusdelmundial.com/figus/img/ARG-9.webp')">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-17.webp" alt="Lionel Messi">
+      <div class="card-body">
+        <h3>ARG-17 Lionel Messi ⭐</h3>
+        <p class="price">$30.000</p>
+        <button class="add-btn" onclick="addCart('ARG-17 Lionel Messi',30000,'https://figusdelmundial.com/figus/img/ARG-17.webp')">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-18.webp" alt="Lautaro Martínez">
+      <div class="card-body">
+        <h3>ARG-18 Lautaro Martínez</h3>
+        <p class="price">$2.500</p>
+        <button class="add-btn" onclick="addCart('ARG-18 Lautaro Martínez',2500,'https://figusdelmundial.com/figus/img/ARG-18.webp')">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-19.webp" alt="Ángel Di María">
+      <div class="card-body">
+        <h3>ARG-19 Ángel Di María</h3>
+        <p class="price">$2.200</p>
+        <button class="add-btn" onclick="addCart('ARG-19 Ángel Di María',2200,'https://figusdelmundial.com/figus/img/ARG-19.webp')">+ Agregar</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-20.webp" alt="Equipo Argentina">
+      <div class="card-body">
+        <h3>ARG-20 Equipo Argentina</h3>
+        <p class="price">$900</p>
+        <button class="add-btn" onclick="addCart('ARG-20 Equipo Argentina',900,'https://figusdelmundial.com/figus/img/ARG-20.webp')">+ Agregar</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>© 2026 DESIMONEER STORE · Figuritas Panini · Mar del Plata, Argentina</footer>
+<script src="cart.js"></script>
+</body>
+</html>

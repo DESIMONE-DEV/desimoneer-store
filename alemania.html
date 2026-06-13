@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alemania — DESIMONEER STORE</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background: linear-gradient(to bottom, #000 33%, #D00 33% 66%, #FFCE00 66%); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">⚽ DESIMONEER STORE</a>
+  <button id="cart-btn" onclick="toggleCart()">🛒 Carrito <span id="cart-count">0</span></button>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="argentina.html">🇦🇷 Argentina</a>
+  <a href="brasil.html">🇧🇷 Brasil</a>
+  <a href="francia.html">🇫🇷 Francia</a>
+  <a href="alemania.html" class="active">🇩🇪 Alemania</a>
+  <a href="espana.html">🇪🇸 España</a>
+  <a href="portugal.html">🇵🇹 Portugal</a>
+  <a href="inglaterra.html">🏴 Inglaterra</a>
+  <a href="holanda.html">🇳🇱 Países Bajos</a>
+</nav>
+
+<div id="cart-panel">
+  <h2>🛒 Mi Carrito <button onclick="toggleCart()">✕</button></h2>
+  <ul id="cart-items"></ul>
+  <div class="cart-footer">
+    <div class="cart-total-row"><span>Total</span><span>$<span id="cart-total">0</span></span></div>
+    <button class="btn-wa" onclick="buildWhatsAppMsg()">💬 Pedir por WhatsApp</button>
+    <button class="btn-clear" onclick="clearCart()">🗑 Vaciar carrito</button>
+  </div>
+</div>
+
+<section class="hero" style="background:linear-gradient(135deg,#1a1a1a,#c0392b);">
+  <h1>🇩🇪 Selección Alemania</h1>
+  <p>Figuritas Panini · Mundial 2026</p>
+</section>
+
+<div class="container">
+  <h2>Jugadores disponibles</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/GER-1.webp" alt="Escudo Alemania">
+      <div class="card-body"><h3>GER-1 Escudo Alemania</h3><p class="price">$800</p>
+      <button class="add-btn" onclick="addCart('GER-1 Escudo Alemania',800,'https://figusdelmundial.com/figus/img/GER-1.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/GER-2.webp" alt="Manuel Neuer">
+      <div class="card-body"><h3>GER-2 Manuel Neuer</h3><p class="price">$1.500</p>
+      <button class="add-btn" onclick="addCart('GER-2 Manuel Neuer',1500,'https://figusdelmundial.com/figus/img/GER-2.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/GER-3.webp" alt="Antonio Rüdiger">
+      <div class="card-body"><h3>GER-3 Antonio Rüdiger</h3><p class="price">$1.300</p>
+      <button class="add-btn" onclick="addCart('GER-3 Antonio Rüdiger',1300,'https://figusdelmundial.com/figus/img/GER-3.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/GER-4.webp" alt="Niklas Süle">
+      <div class="card-body"><h3>GER-4 Niklas Süle</h3><p class="price">$1.200</p>
+      <button class="add-btn" onclick="addCart('GER-4 Niklas Süle',1200,'https://figusdelmundial.com/figus/img/GER-4.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/GER-5.webp" alt="Joshua Kimmich">
+      <div class="card-body"><h3>GER-5 Joshua Kimmich</h3><p class="price">$2.000</p>
+      <button class="add-btn" onclick="addCart('GER-5 Joshua Kimmich',2000,'https://figusdelmundial.com/figus/img/GER-5.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/GER-6.webp" alt="Leon Goretzka">
+      <div class="card-body"><h3>GER-6 Leon Goretzka</h3><p class="price">$1.300</p>
+      <button class="add-btn" onclick="addCart('GER-6 Leon Goretzka',1300,'https://figusdelmundial.com/figus/img/GER-6.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/GER-7.webp" alt="Kai Havertz">
+      <div class="card-body"><h3>GER-7 Kai Havertz</h3><p class="price">$1.800</p>
+      <button class="add-btn" onclick="addCart('GER-7 Kai Havertz',1800,'https://figusdelmundial.com/figus/img/GER-7.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/GER-8.webp" alt="Thomas Müller">
+      <div class="card-body"><h3>GER-8 Thomas Müller</h3><p class="price">$2.000</p>
+      <button class="add-btn" onclick="addCart('GER-8 Thomas Müller',2000,'https://figusdelmundial.com/figus/img/GER-8.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/GER-17.webp" alt="Florian Wirtz">
+      <div class="card-body"><h3>GER-17 Florian Wirtz ⭐</h3><p class="price">$25.000</p>
+      <button class="add-btn" onclick="addCart('GER-17 Florian Wirtz',25000,'https://figusdelmundial.com/figus/img/GER-17.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/GER-18.webp" alt="Serge Gnabry">
+      <div class="card-body"><h3>GER-18 Serge Gnabry</h3><p class="price">$1.800</p>
+      <button class="add-btn" onclick="addCart('GER-18 Serge Gnabry',1800,'https://figusdelmundial.com/figus/img/GER-18.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/GER-20.webp" alt="Equipo Alemania">
+      <div class="card-body"><h3>GER-20 Equipo Alemania</h3><p class="price">$900</p>
+      <button class="add-btn" onclick="addCart('GER-20 Equipo Alemania',900,'https://figusdelmundial.com/figus/img/GER-20.webp')">+ Agregar</button></div>
+    </div>
+
+  </div>
+</div>
+
+<footer>© 2026 DESIMONEER STORE · Figuritas Panini · Mar del Plata, Argentina</footer>
+<script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inglaterra — DESIMONEER STORE</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background: linear-gradient(to bottom, #fff 40%, #CF142B 40%); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">⚽ DESIMONEER STORE</a>
+  <button id="cart-btn" onclick="toggleCart()">🛒 Carrito <span id="cart-count">0</span></button>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="argentina.html">🇦🇷 Argentina</a>
+  <a href="brasil.html">🇧🇷 Brasil</a>
+  <a href="francia.html">🇫🇷 Francia</a>
+  <a href="alemania.html">🇩🇪 Alemania</a>
+  <a href="espana.html">🇪🇸 España</a>
+  <a href="portugal.html">🇵🇹 Portugal</a>
+  <a href="inglaterra.html" class="active">🏴 Inglaterra</a>
+  <a href="holanda.html">🇳🇱 Países Bajos</a>
+</nav>
+
+<div id="cart-panel">
+  <h2>🛒 Mi Carrito <button onclick="toggleCart()">✕</button></h2>
+  <ul id="cart-items"></ul>
+  <div class="cart-footer">
+    <div class="cart-total-row"><span>Total</span><span>$<span id="cart-total">0</span></span></div>
+    <button class="btn-wa" onclick="buildWhatsAppMsg()">💬 Pedir por WhatsApp</button>
+    <button class="btn-clear" onclick="clearCart()">🗑 Vaciar carrito</button>
+  </div>
+</div>
+
+<section class="hero" style="background:linear-gradient(135deg,#012169,#CF142B);">
+  <h1>🏴 Selección Inglaterra</h1>
+  <p>Figuritas Panini · Mundial 2026</p>
+</section>
+
+<div class="container">
+  <h2>Jugadores disponibles</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ENG-1.webp" alt="Escudo Inglaterra">
+      <div class="card-body"><h3>ENG-1 Escudo Inglaterra</h3><p class="price">$800</p>
+      <button class="add-btn" onclick="addCart('ENG-1 Escudo Inglaterra',800,'https://figusdelmundial.com/figus/img/ENG-1.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ENG-2.webp" alt="Jordan Pickford">
+      <div class="card-body"><h3>ENG-2 Jordan Pickford</h3><p class="price">$1.200</p>
+      <button class="add-btn" onclick="addCart('ENG-2 Jordan Pickford',1200,'https://figusdelmundial.com/figus/img/ENG-2.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ENG-3.webp" alt="Luke Shaw">
+      <div class="card-body"><h3>ENG-3 Luke Shaw</h3><p class="price">$1.200</p>
+      <button class="add-btn" onclick="addCart('ENG-3 Luke Shaw',1200,'https://figusdelmundial.com/figus/img/ENG-3.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ENG-4.webp" alt="Harry Maguire">
+      <div class="card-body"><h3>ENG-4 Harry Maguire</h3><p class="price">$1.100</p>
+      <button class="add-btn" onclick="addCart('ENG-4 Harry Maguire',1100,'https://figusdelmundial.com/figus/img/ENG-4.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ENG-5.webp" alt="Declan Rice">
+      <div class="card-body"><h3>ENG-5 Declan Rice</h3><p class="price">$2.000</p>
+      <button class="add-btn" onclick="addCart('ENG-5 Declan Rice',2000,'https://figusdelmundial.com/figus/img/ENG-5.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ENG-6.webp" alt="Trent Alexander-Arnold">
+      <div class="card-body"><h3>ENG-6 Trent Alexander-Arnold</h3><p class="price">$2.000</p>
+      <button class="add-btn" onclick="addCart('ENG-6 Trent Alexander-Arnold',2000,'https://figusdelmundial.com/figus/img/ENG-6.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ENG-7.webp" alt="Phil Foden">
+      <div class="card-body"><h3>ENG-7 Phil Foden</h3><p class="price">$2.500</p>
+      <button class="add-btn" onclick="addCart('ENG-7 Phil Foden',2500,'https://figusdelmundial.com/figus/img/ENG-7.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ENG-8.webp" alt="Harry Kane">
+      <div class="card-body"><h3>ENG-8 Harry Kane</h3><p class="price">$3.000</p>
+      <button class="add-btn" onclick="addCart('ENG-8 Harry Kane',3000,'https://figusdelmundial.com/figus/img/ENG-8.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ENG-17.webp" alt="Jude Bellingham">
+      <div class="card-body"><h3>ENG-17 Jude Bellingham ⭐</h3><p class="price">$30.000</p>
+      <button class="add-btn" onclick="addCart('ENG-17 Jude Bellingham',30000,'https://figusdelmundial.com/figus/img/ENG-17.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ENG-18.webp" alt="Bukayo Saka">
+      <div class="card-body"><h3>ENG-18 Bukayo Saka</h3><p class="price">$2.500</p>
+      <button class="add-btn" onclick="addCart('ENG-18 Bukayo Saka',2500,'https://figusdelmundial.com/figus/img/ENG-18.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/ENG-20.webp" alt="Equipo Inglaterra">
+      <div class="card-body"><h3>ENG-20 Equipo Inglaterra</h3><p class="price">$900</p>
+      <button class="add-btn" onclick="addCart('ENG-20 Equipo Inglaterra',900,'https://figusdelmundial.com/figus/img/ENG-20.webp')">+ Agregar</button></div>
+    </div>
+
+  </div>
+</div>
+
+<footer>© 2026 DESIMONEER STORE · Figuritas Panini · Mar del Plata, Argentina</footer>
+<script src="cart.js"></script>
+</body>
+</html>

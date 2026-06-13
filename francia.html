@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francia — DESIMONEER STORE</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background: linear-gradient(to bottom, #002395 33%, #fff 33% 66%, #ED2939 66%); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">⚽ DESIMONEER STORE</a>
+  <button id="cart-btn" onclick="toggleCart()">🛒 Carrito <span id="cart-count">0</span></button>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="argentina.html">🇦🇷 Argentina</a>
+  <a href="brasil.html">🇧🇷 Brasil</a>
+  <a href="francia.html" class="active">🇫🇷 Francia</a>
+  <a href="alemania.html">🇩🇪 Alemania</a>
+  <a href="espana.html">🇪🇸 España</a>
+  <a href="portugal.html">🇵🇹 Portugal</a>
+  <a href="inglaterra.html">🏴 Inglaterra</a>
+  <a href="holanda.html">🇳🇱 Países Bajos</a>
+</nav>
+
+<div id="cart-panel">
+  <h2>🛒 Mi Carrito <button onclick="toggleCart()">✕</button></h2>
+  <ul id="cart-items"></ul>
+  <div class="cart-footer">
+    <div class="cart-total-row"><span>Total</span><span>$<span id="cart-total">0</span></span></div>
+    <button class="btn-wa" onclick="buildWhatsAppMsg()">💬 Pedir por WhatsApp</button>
+    <button class="btn-clear" onclick="clearCart()">🗑 Vaciar carrito</button>
+  </div>
+</div>
+
+<section class="hero" style="background:linear-gradient(135deg,#002395,#ED2939);">
+  <h1>🇫🇷 Selección Francia</h1>
+  <p>Figuritas Panini · Mundial 2026</p>
+</section>
+
+<div class="container">
+  <h2>Jugadores disponibles</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/FRA-1.webp" alt="Escudo Francia">
+      <div class="card-body"><h3>FRA-1 Escudo Francia</h3><p class="price">$800</p>
+      <button class="add-btn" onclick="addCart('FRA-1 Escudo Francia',800,'https://figusdelmundial.com/figus/img/FRA-1.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/FRA-2.webp" alt="Mike Maignan">
+      <div class="card-body"><h3>FRA-2 Mike Maignan</h3><p class="price">$1.200</p>
+      <button class="add-btn" onclick="addCart('FRA-2 Mike Maignan',1200,'https://figusdelmundial.com/figus/img/FRA-2.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/FRA-3.webp" alt="Lucas Hernández">
+      <div class="card-body"><h3>FRA-3 Lucas Hernández</h3><p class="price">$1.200</p>
+      <button class="add-btn" onclick="addCart('FRA-3 Lucas Hernández',1200,'https://figusdelmundial.com/figus/img/FRA-3.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/FRA-4.webp" alt="Raphaël Varane">
+      <div class="card-body"><h3>FRA-4 Raphaël Varane</h3><p class="price">$1.300</p>
+      <button class="add-btn" onclick="addCart('FRA-4 Raphaël Varane',1300,'https://figusdelmundial.com/figus/img/FRA-4.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/FRA-5.webp" alt="Dayot Upamecano">
+      <div class="card-body"><h3>FRA-5 Dayot Upamecano</h3><p class="price">$1.200</p>
+      <button class="add-btn" onclick="addCart('FRA-5 Dayot Upamecano',1200,'https://figusdelmundial.com/figus/img/FRA-5.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/FRA-6.webp" alt="N'Golo Kanté">
+      <div class="card-body"><h3>FRA-6 N'Golo Kanté</h3><p class="price">$1.500</p>
+      <button class="add-btn" onclick="addCart('FRA-6 N\'Golo Kanté',1500,'https://figusdelmundial.com/figus/img/FRA-6.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/FRA-7.webp" alt="Antoine Griezmann">
+      <div class="card-body"><h3>FRA-7 Antoine Griezmann</h3><p class="price">$2.200</p>
+      <button class="add-btn" onclick="addCart('FRA-7 Antoine Griezmann',2200,'https://figusdelmundial.com/figus/img/FRA-7.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/FRA-8.webp" alt="Aurélien Tchouaméni">
+      <div class="card-body"><h3>FRA-8 Aurélien Tchouaméni</h3><p class="price">$1.400</p>
+      <button class="add-btn" onclick="addCart('FRA-8 Aurélien Tchouaméni',1400,'https://figusdelmundial.com/figus/img/FRA-8.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/FRA-17.webp" alt="Kylian Mbappé">
+      <div class="card-body"><h3>FRA-17 Kylian Mbappé ⭐</h3><p class="price">$30.000</p>
+      <button class="add-btn" onclick="addCart('FRA-17 Kylian Mbappé',30000,'https://figusdelmundial.com/figus/img/FRA-17.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/FRA-18.webp" alt="Ousmane Dembélé">
+      <div class="card-body"><h3>FRA-18 Ousmane Dembélé</h3><p class="price">$2.000</p>
+      <button class="add-btn" onclick="addCart('FRA-18 Ousmane Dembélé',2000,'https://figusdelmundial.com/figus/img/FRA-18.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/FRA-20.webp" alt="Equipo Francia">
+      <div class="card-body"><h3>FRA-20 Equipo Francia</h3><p class="price">$900</p>
+      <button class="add-btn" onclick="addCart('FRA-20 Equipo Francia',900,'https://figusdelmundial.com/figus/img/FRA-20.webp')">+ Agregar</button></div>
+    </div>
+
+  </div>
+</div>
+
+<footer>© 2026 DESIMONEER STORE · Figuritas Panini · Mar del Plata, Argentina</footer>
+<script src="cart.js"></script>
+</body>
+</html>

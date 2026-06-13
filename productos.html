@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos - Desimoneer Store</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f5f5f5}
+header{background:#0b3d91;color:#fff;padding:20px;text-align:center}
+nav{background:#082b67;padding:10px;text-align:center}
+nav a{color:white;text-decoration:none;margin:0 15px}
+.container{max-width:1200px;margin:auto;padding:20px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:white;border-radius:10px;padding:15px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.card img{width:100%;border-radius:8px}
+.price{font-size:22px;color:#0b3d91;font-weight:bold}
+button{background:#0b3d91;color:white;border:none;padding:10px;border-radius:6px;cursor:pointer;width:100%}
+#cart{background:white;padding:15px;border-radius:10px;margin-top:20px}
+</style>
+<script>
+  const mp = new MercadoPago('TU_PUBLIC_KEY', {
+    locale: 'es-AR'
+  });
+</script>
+</head>
+<body>
+
+<header>
+<h1>🛍️ Productos</h1>
+<p>Catálogo completo de Desimoneer Store</p>
+</header>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="productos.html">Productos</a>
+</nav>
+
+<div class="container">
+<h2>Catálogo - Argentina</h2>
+<div class="products">
+
+<div class="card">
+  <img src="https://figusdelmundial.com/figus/img/ARG-1.webp" alt="Escudo Argentina">
+  <h3>Escudo Argentina</h3>
+  <p class="price">$800</p>
+  <button onclick="addCart('Escudo Argentina',800)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+  <img src="https://figusdelmundial.com/figus/img/ARG-2.webp" alt="Emiliano Martínez">
+  <h3>Emiliano Martínez</h3>
+  <p class="price">$1500</p>
+  <button onclick="addCart('Emiliano Martínez',1500)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+  <img src="https://figusdelmundial.com/figus/img/ARG-3.webp" alt="Cristian Romero">
+  <h3>Cristian Romero</h3>
+  <p class="price">$1200</p>
+  <button onclick="addCart('Cristian Romero',1200)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+  <img src="https://figusdelmundial.com/figus/img/ARG-4.webp" alt="Nicolás Otamendi">
+  <h3>Nicolás Otamendi</h3>
+  <p class="price">$1100</p>
+  <button onclick="addCart('Nicolás Otamendi',1100)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+  <img src="https://figusdelmundial.com/figus/img/ARG-5.webp" alt="Marcos Acuña">
+  <h3>Marcos Acuña</h3>
+  <p class="price">$1000</p>
+  <button onclick="addCart('Marcos Acuña',1000)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+  <img src="https://figusdelmundial.com/figus/img/ARG-6.webp" alt="Rodrigo De Paul">
+  <h3>Rodrigo De Paul</h3>
+  <p class="price">$1300</p>
+  <button onclick="addCart('Rodrigo De Paul',1300)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+  <img src="https://figusdelmundial.com/figus/img/ARG-7.webp" alt="Leandro Paredes">
+  <h3>Leandro Paredes</h3>
+  <p class="price">$1200</p>
+  <button onclick="addCart('Leandro Paredes',1200)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+  <img src="https://figusdelmundial.com/figus/img/ARG-8.webp" alt="Giovani Lo Celso">
+  <h3>Giovani Lo Celso</h3>
+  <p class="price">$1200</p>
+  <button onclick="addCart('Giovani Lo Celso',1200)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+  <img src="https://figusdelmundial.com/figus/img/ARG-9.webp" alt="Julián Álvarez">
+  <h3>Julián Álvarez</h3>
+  <p class="price">$2000</p>
+  <button onclick="addCart('Julián Álvarez',2000)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+  <img src="https://figusdelmundial.com/figus/img/ARG-17.webp" alt="Lionel Messi">
+  <h3>Lionel Messi</h3>
+  <p class="price">$30000</p>
+  <button onclick="addCart('Lionel Messi',30000)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+  <img src="https://figusdelmundial.com/figus/img/ARG-18.webp" alt="Lautaro Martínez">
+  <h3>Lautaro Martínez</h3>
+  <p class="price">$2500</p>
+  <button onclick="addCart('Lautaro Martínez',2500)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+  <img src="https://figusdelmundial.com/figus/img/ARG-19.webp" alt="Ángel Di María">
+  <h3>Ángel Di María</h3>
+  <p class="price">$2200</p>
+  <button onclick="addCart('Ángel Di María',2200)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+  <img src="https://figusdelmundial.com/figus/img/ARG-20.webp" alt="Equipo Argentina">
+  <h3>Equipo Argentina</h3>
+  <p class="price">$900</p>
+  <button onclick="addCart('Equipo Argentina',900)">Agregar al carrito</button>
+</div>
+
+</div> <!-- cierre del catálogo -->
+
+<!-- Carrito -->
+<div id="cart">
+  <h2>🛒 Carrito</h2>
+  <ul id="items"></ul>
+  <strong>Total: $<span id="total">0</span></strong>
+  <br><br>
+  <button id="checkout">Pagar con Mercado Pago</button>
+</div>
+
+<script>
+let carrito = [];
+let total = 0;
+
+function addCart(nombre, precio) {
+  // guardar producto en el array2:17 13/06/2026
+  carrito.push({nombre, precio});
+
+  // actualizar lista en pantalla
+  const li = document.createElement('li');
+  li.textContent = nombre + ' - $' + precio;
+  document.getElementById('items').appendChild(li);
+
+  // actualizar total
+  total += precio;
+  document.getElementById('total').textContent = total;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Países Bajos — DESIMONEER STORE</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background: linear-gradient(to bottom, #AE1C28 33%, #fff 33% 66%, #21468B 66%); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">⚽ DESIMONEER STORE</a>
+  <button id="cart-btn" onclick="toggleCart()">🛒 Carrito <span id="cart-count">0</span></button>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="argentina.html">🇦🇷 Argentina</a>
+  <a href="brasil.html">🇧🇷 Brasil</a>
+  <a href="francia.html">🇫🇷 Francia</a>
+  <a href="alemania.html">🇩🇪 Alemania</a>
+  <a href="espana.html">🇪🇸 España</a>
+  <a href="portugal.html">🇵🇹 Portugal</a>
+  <a href="inglaterra.html">🏴 Inglaterra</a>
+  <a href="holanda.html" class="active">🇳🇱 Países Bajos</a>
+</nav>
+
+<div id="cart-panel">
+  <h2>🛒 Mi Carrito <button onclick="toggleCart()">✕</button></h2>
+  <ul id="cart-items"></ul>
+  <div class="cart-footer">
+    <div class="cart-total-row"><span>Total</span><span>$<span id="cart-total">0</span></span></div>
+    <button class="btn-wa" onclick="buildWhatsAppMsg()">💬 Pedir por WhatsApp</button>
+    <button class="btn-clear" onclick="clearCart()">🗑 Vaciar carrito</button>
+  </div>
+</div>
+
+<section class="hero" style="background:linear-gradient(135deg,#AE1C28,#FF6600);">
+  <h1>🇳🇱 Selección Países Bajos</h1>
+  <p>Figuritas Panini · Mundial 2026</p>
+</section>
+
+<div class="container">
+  <h2>Jugadores disponibles</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/NED-1.webp" alt="Escudo Países Bajos">
+      <div class="card-body"><h3>NED-1 Escudo Países Bajos</h3><p class="price">$800</p>
+      <button class="add-btn" onclick="addCart('NED-1 Escudo Países Bajos',800,'https://figusdelmundial.com/figus/img/NED-1.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/NED-2.webp" alt="Bart Verbruggen">
+      <div class="card-body"><h3>NED-2 Bart Verbruggen</h3><p class="price">$1.200</p>
+      <button class="add-btn" onclick="addCart('NED-2 Bart Verbruggen',1200,'https://figusdelmundial.com/figus/img/NED-2.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/NED-3.webp" alt="Tyrell Malacia">
+      <div class="card-body"><h3>NED-3 Tyrell Malacia</h3><p class="price">$1.200</p>
+      <button class="add-btn" onclick="addCart('NED-3 Tyrell Malacia',1200,'https://figusdelmundial.com/figus/img/NED-3.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/NED-4.webp" alt="Virgil van Dijk">
+      <div class="card-body"><h3>NED-4 Virgil van Dijk</h3><p class="price">$2.500</p>
+      <button class="add-btn" onclick="addCart('NED-4 Virgil van Dijk',2500,'https://figusdelmundial.com/figus/img/NED-4.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/NED-5.webp" alt="Stefan de Vrij">
+      <div class="card-body"><h3>NED-5 Stefan de Vrij</h3><p class="price">$1.300</p>
+      <button class="add-btn" onclick="addCart('NED-5 Stefan de Vrij',1300,'https://figusdelmundial.com/figus/img/NED-5.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/NED-6.webp" alt="Frenkie de Jong">
+      <div class="card-body"><h3>NED-6 Frenkie de Jong</h3><p class="price">$2.500</p>
+      <button class="add-btn" onclick="addCart('NED-6 Frenkie de Jong',2500,'https://figusdelmundial.com/figus/img/NED-6.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/NED-7.webp" alt="Xavi Simons">
+      <div class="card-body"><h3>NED-7 Xavi Simons</h3><p class="price">$2.000</p>
+      <button class="add-btn" onclick="addCart('NED-7 Xavi Simons',2000,'https://figusdelmundial.com/figus/img/NED-7.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/NED-8.webp" alt="Teun Koopmeiners">
+      <div class="card-body"><h3>NED-8 Teun Koopmeiners</h3><p class="price">$1.800</p>
+      <button class="add-btn" onclick="addCart('NED-8 Teun Koopmeiners',1800,'https://figusdelmundial.com/figus/img/NED-8.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/NED-17.webp" alt="Memphis Depay">
+      <div class="card-body"><h3>NED-17 Memphis Depay ⭐</h3><p class="price">$20.000</p>
+      <button class="add-btn" onclick="addCart('NED-17 Memphis Depay',20000,'https://figusdelmundial.com/figus/img/NED-17.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/NED-18.webp" alt="Cody Gakpo">
+      <div class="card-body"><h3>NED-18 Cody Gakpo</h3><p class="price">$2.000</p>
+      <button class="add-btn" onclick="addCart('NED-18 Cody Gakpo',2000,'https://figusdelmundial.com/figus/img/NED-18.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/NED-20.webp" alt="Equipo Países Bajos">
+      <div class="card-body"><h3>NED-20 Equipo Países Bajos</h3><p class="price">$900</p>
+      <button class="add-btn" onclick="addCart('NED-20 Equipo Países Bajos',900,'https://figusdelmundial.com/figus/img/NED-20.webp')">+ Agregar</button></div>
+    </div>
+
+  </div>
+</div>
+
+<footer>© 2026 DESIMONEER STORE · Figuritas Panini · Mar del Plata, Argentina</footer>
+<script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DESIMONEER STORE — Figuritas Panini 2026</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">⚽ DESIMONEER STORE</a>
+  <button id="cart-btn" onclick="toggleCart()">
+    🛒 Carrito
+    <span id="cart-count">0</span>
+  </button>
+</header>
+
+<nav>
+  <a href="index.html" class="active">Inicio</a>
+  <a href="argentina.html">🇦🇷 Argentina</a>
+  <a href="brasil.html">🇧🇷 Brasil</a>
+  <a href="francia.html">🇫🇷 Francia</a>
+  <a href="alemania.html">🇩🇪 Alemania</a>
+  <a href="espana.html">🇪🇸 España</a>
+  <a href="portugal.html">🇵🇹 Portugal</a>
+  <a href="inglaterra.html">🏴 Inglaterra</a>
+  <a href="holanda.html">🇳🇱 Países Bajos</a>
+</nav>
+
+<!-- PANEL CARRITO -->
+<div id="cart-panel">
+  <h2>🛒 Mi Carrito <button onclick="toggleCart()">✕</button></h2>
+  <ul id="cart-items"></ul>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span>$<span id="cart-total">0</span></span>
+    </div>
+    <button class="btn-wa" onclick="buildWhatsAppMsg()">💬 Pedir por WhatsApp</button>
+    <button class="btn-clear" onclick="clearCart()">🗑 Vaciar carrito</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Completá tu colección</h1>
+  <p>Figuritas Panini de todas las selecciones · Envíos a todo Argentina</p>
+</section>
+
+<div class="container">
+  <h2>🌎 Selecciones disponibles</h2>
+  <div class="teams">
+
+    <div class="team-card">
+      <img src="https://figusdelmundial.com/figus/img/ARG-1.webp" alt="Argentina">
+      <div class="team-card-body">
+        <h3>🇦🇷 Argentina</h3>
+        <p>Messi, Lautaro, Di María y más</p>
+        <a class="btn-team" href="argentina.html">Ver figuritas</a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="https://figusdelmundial.com/figus/img/BRA-1.webp" alt="Brasil">
+      <div class="team-card-body">
+        <h3>🇧🇷 Brasil</h3>
+        <p>Neymar, Vinicius Jr y más</p>
+        <a class="btn-team" href="brasil.html">Ver figuritas</a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="https://figusdelmundial.com/figus/img/FRA-1.webp" alt="Francia">
+      <div class="team-card-body">
+        <h3>🇫🇷 Francia</h3>
+        <p>Mbappé, Griezmann y más</p>
+        <a class="btn-team" href="francia.html">Ver figuritas</a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="https://figusdelmundial.com/figus/img/GER-1.webp" alt="Alemania">
+      <div class="team-card-body">
+        <h3>🇩🇪 Alemania</h3>
+        <p>Müller, Gnabry y más</p>
+        <a class="btn-team" href="alemania.html">Ver figuritas</a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="https://figusdelmundial.com/figus/img/ESP-1.webp" alt="España">
+      <div class="team-card-body">
+        <h3>🇪🇸 España</h3>
+        <p>Pedri, Yamal y más</p>
+        <a class="btn-team" href="espana.html">Ver figuritas</a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="https://figusdelmundial.com/figus/img/POR-1.webp" alt="Portugal">
+      <div class="team-card-body">
+        <h3>🇵🇹 Portugal</h3>
+        <p>Cristiano Ronaldo y más</p>
+        <a class="btn-team" href="portugal.html">Ver figuritas</a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="https://figusdelmundial.com/figus/img/ENG-1.webp" alt="Inglaterra">
+      <div class="team-card-body">
+        <h3>🏴 Inglaterra</h3>
+        <p>Bellingham, Saka y más</p>
+        <a class="btn-team" href="inglaterra.html">Ver figuritas</a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="https://figusdelmundial.com/figus/img/NED-1.webp" alt="Países Bajos">
+      <div class="team-card-body">
+        <h3>🇳🇱 Países Bajos</h3>
+        <p>Van Dijk, Depay y más</p>
+        <a class="btn-team" href="holanda.html">Ver figuritas</a>
+      </div>
+    </div>
+
+  </div>
+
+  <br><br>
+  <h2>📞 Cómo comprarte</h2>
+  <p>✔ Elegí las figuritas que te faltan y agregalas al carrito.</p>
+  <p>✔ Cuando terminés, hacé clic en <strong>Pedir por WhatsApp</strong> y te llega el detalle listo para enviar.</p>
+  <p>✔ Pagás por Mercado Pago y coordinamos el envío.</p>
+</div>
+
+<footer>© 2026 DESIMONEER STORE · Figuritas Panini · Mar del Plata, Argentina</footer>
+
+<script src="cart.js"></script>
+</body>
+</html>
