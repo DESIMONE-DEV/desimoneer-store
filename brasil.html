@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brasil — DESIMONEER STORE</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { background: linear-gradient(to bottom, #009c3b 33%, #fff 33% 66%, #009c3b 66%); }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="index.html">⚽ DESIMONEER STORE</a>
+  <button id="cart-btn" onclick="toggleCart()">🛒 Carrito <span id="cart-count">0</span></button>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="argentina.html">🇦🇷 Argentina</a>
+  <a href="brasil.html" class="active">🇧🇷 Brasil</a>
+  <a href="francia.html">🇫🇷 Francia</a>
+  <a href="alemania.html">🇩🇪 Alemania</a>
+  <a href="espana.html">🇪🇸 España</a>
+  <a href="portugal.html">🇵🇹 Portugal</a>
+  <a href="inglaterra.html">🏴 Inglaterra</a>
+  <a href="holanda.html">🇳🇱 Países Bajos</a>
+</nav>
+
+<div id="cart-panel">
+  <h2>🛒 Mi Carrito <button onclick="toggleCart()">✕</button></h2>
+  <ul id="cart-items"></ul>
+  <div class="cart-footer">
+    <div class="cart-total-row"><span>Total</span><span>$<span id="cart-total">0</span></span></div>
+    <button class="btn-wa" onclick="buildWhatsAppMsg()">💬 Pedir por WhatsApp</button>
+    <button class="btn-clear" onclick="clearCart()">🗑 Vaciar carrito</button>
+  </div>
+</div>
+
+<section class="hero" style="background:linear-gradient(135deg,#009c3b,#ffdf00);">
+  <h1>🇧🇷 Selección Brasil</h1>
+  <p>Figuritas Panini · Mundial 2026</p>
+</section>
+
+<div class="container">
+  <h2>Jugadores disponibles</h2>
+  <div class="products">
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/BRA-1.webp" alt="Escudo Brasil">
+      <div class="card-body"><h3>BRA-1 Escudo Brasil</h3><p class="price">$800</p>
+      <button class="add-btn" onclick="addCart('BRA-1 Escudo Brasil',800,'https://figusdelmundial.com/figus/img/BRA-1.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/BRA-2.webp" alt="Alisson">
+      <div class="card-body"><h3>BRA-2 Alisson</h3><p class="price">$1.500</p>
+      <button class="add-btn" onclick="addCart('BRA-2 Alisson',1500,'https://figusdelmundial.com/figus/img/BRA-2.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/BRA-3.webp" alt="Danilo">
+      <div class="card-body"><h3>BRA-3 Danilo</h3><p class="price">$1.200</p>
+      <button class="add-btn" onclick="addCart('BRA-3 Danilo',1200,'https://figusdelmundial.com/figus/img/BRA-3.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/BRA-4.webp" alt="Thiago Silva">
+      <div class="card-body"><h3>BRA-4 Thiago Silva</h3><p class="price">$1.200</p>
+      <button class="add-btn" onclick="addCart('BRA-4 Thiago Silva',1200,'https://figusdelmundial.com/figus/img/BRA-4.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/BRA-5.webp" alt="Marquinhos">
+      <div class="card-body"><h3>BRA-5 Marquinhos</h3><p class="price">$1.200</p>
+      <button class="add-btn" onclick="addCart('BRA-5 Marquinhos',1200,'https://figusdelmundial.com/figus/img/BRA-5.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/BRA-17.webp" alt="Neymar Jr">
+      <div class="card-body"><h3>BRA-17 Neymar Jr ⭐</h3><p class="price">$30.000</p>
+      <button class="add-btn" onclick="addCart('BRA-17 Neymar Jr',30000,'https://figusdelmundial.com/figus/img/BRA-17.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/BRA-18.webp" alt="Vinicius Jr">
+      <div class="card-body"><h3>BRA-18 Vinicius Jr</h3><p class="price">$2.500</p>
+      <button class="add-btn" onclick="addCart('BRA-18 Vinicius Jr',2500,'https://figusdelmundial.com/figus/img/BRA-18.webp')">+ Agregar</button></div>
+    </div>
+
+    <div class="card">
+      <img src="https://figusdelmundial.com/figus/img/BRA-20.webp" alt="Equipo Brasil">
+      <div class="card-body"><h3>BRA-20 Equipo Brasil</h3><p class="price">$900</p>
+      <button class="add-btn" onclick="addCart('BRA-20 Equipo Brasil',900,'https://figusdelmundial.com/figus/img/BRA-20.webp')">+ Agregar</button></div>
+    </div>
+
+  </div>
+</div>
+
+<footer>© 2026 DESIMONEER STORE · Figuritas Panini · Mar del Plata, Argentina</footer>
+<script src="cart.js"></script>
+</body>
+</html>
