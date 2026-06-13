@@ -74,7 +74,7 @@ function buildWhatsAppMsg() {
   const total = cart.reduce((s, i) => s + i.precio * i.qty, 0);
   lines.push(`\n*Total: $${total.toLocaleString('es-AR')}*`);
   const msg = encodeURIComponent(`¡Hola! Quiero comprar estas figuritas:\n\n${lines.join('\n')}`);
-  window.open(`https://wa.me/549XXXXXXXXXX?text=${msg}`, '_blank');
+  window.open(`https://wa.me/5492235025277?text=${msg}`, '_blank');
 }
 
 function toggleCart() {
